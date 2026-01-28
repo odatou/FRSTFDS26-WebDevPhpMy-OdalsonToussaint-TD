@@ -58,14 +58,14 @@ $date_safe = htmlspecialchars($date);
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Résultat de la publication</title>
+    <title>Resultat de la publication</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="p-5">
     <div class="container">
         <?php if (!$article_valide): ?>
             <div class="alert alert-danger">
-                <strong>❌ Erreurs détectées :</strong>
+                <strong> Erreurs detectees :</strong>
                 <ul>
                     <?php foreach ($errors as $error): ?>
                         <li><?= htmlspecialchars($error) ?></li>
@@ -75,17 +75,17 @@ $date_safe = htmlspecialchars($date);
             </div>
         <?php else: ?>
             <div class="alert alert-success">
-                <h5>✅ Article créé avec succès !</h5>
+                <h5>Article cree avec succes !</h5>
                 <div class="card mt-3">
                     <div class="card-body">
                         <h6><?= $titre_safe ?></h6>
                         <p><?= nl2br($contenu_safe) ?></p>
-                        <small>Par <strong><?= $auteur_safe ?></strong> | Catégorie: <?= $categorie_safe ?> | Publié le <?= $date_safe ?></small>
+                        <small>Par <strong><?= $auteur_safe ?></strong> | Categorie: <?= $categorie_safe ?> | Publié le <?= $date_safe ?></small>
                     </div>
                 </div>
                 <div class="mt-3">
                     <small class="text-muted">
-                        🔒 Sécurité: Toutes les données affichées ont été nettoyées avec htmlspecialchars()
+                        Sécurite: Toutes les données affichées ont été nettoyees avec htmlspecialchars()
                     </small>
                 </div>
             </div>
